@@ -3,7 +3,7 @@ import random
 
 pygame.font.init()
 # Initializing variables needed for generating array
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((780, 600))
 
 
 array = [0]*150
