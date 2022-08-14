@@ -18,7 +18,7 @@ fnt = pygame.font.SysFont("Times New Roman", 20)
 fnt1 = pygame.font.SysFont("Helvetica", 10)
 
 
-width = 800
+width = 780
 length = 600
 
 # Draw the array values
