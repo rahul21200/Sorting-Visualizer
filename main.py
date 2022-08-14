@@ -11,7 +11,7 @@ from Bubble_sort import *
 pygame.init()
 # pygame.font.init()
 # Creating the screen/window
-screen = pygame.display.set_mode((800, 700))
+screen = pygame.display.set_mode((780, 700))
 
 # Title and display of the window
 pygame.display.set_caption("Sorting visualizer")

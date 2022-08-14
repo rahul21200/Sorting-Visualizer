@@ -6,9 +6,9 @@ pygame.font.init()
 screen = pygame.display.set_mode((800, 600))
 
 
-array = [0]*151
+array = [0]*150
 
-arr_clr = [(28, 186, 255)]*151
+arr_clr = [(28, 186, 255)]*150
 
 clr_ind = 0
 
@@ -55,14 +55,14 @@ def draw():
                          i + 110), (800, boundry_grp * i + 110))
 
     # Drawing the array values as lines
-    for i in range(1, 151):
+    for i in range(150):
         pygame.draw.line(screen, arr_clr[i], (boundry_arr * i-3, 110),
                          (boundry_arr * i-3, array[i]*boundry_grp + 110), element_width)
 
 
 # Generate new Array
 def generate_arr():
-    for i in range(1, 151):
+    for i in range(150):
         arr_clr[i] = clr[0]
         array[i] = random.randrange(1, 100)
 
