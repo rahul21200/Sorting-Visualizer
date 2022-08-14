@@ -10,12 +10,12 @@ from Bubble_sort import *
 # Initializing the pygame
 pygame.init()
 # pygame.font.init()
-# Creating the screen/window 
-screen = pygame.display.set_mode((800,700))
+# Creating the screen/window
+screen = pygame.display.set_mode((800, 700))
 
 # Title and display of the window
 pygame.display.set_caption("Sorting visualizer")
-icon = pygame.image.load(r'C:\Users\USER\Desktop\def\pygame_T\logo.png')
+icon = pygame.image.load('logo.png')
 pygame.display.set_icon(icon)
 
 running = True
@@ -25,7 +25,7 @@ while running:
     # background
     screen.fill((32, 38, 40))
 
-    # Event handler stores all event 
+    # Event handler stores all event
     for event in pygame.event.get():
 
         # If we click Close button in window
@@ -35,46 +35,45 @@ while running:
             sys.exit()
 
         if event.type == pygame.KEYDOWN:
-            
+
             if event.key == pygame.K_r:
-                generate_arr() 
+                generate_arr()
 
             # if event.key == pygame.K_RETURN:
             if event.key == pygame.K_1:
                 mergesort(array, 1, len(array)-1)
                 for i in range(len(array)):
-                    arr_clr[i] = (0,255,0)
-                
-            if event.key == pygame.K_2:        
+                    arr_clr[i] = (0, 255, 0)
+
+            if event.key == pygame.K_2:
                 quicksort(array, 1, len(array)-1)
                 for i in range(len(array)):
-                    arr_clr[i] = (0,255,0)
-                
+                    arr_clr[i] = (0, 255, 0)
+
             if event.key == pygame.K_3:
                 selection(array)
-                
-            if event.key == pygame.K_4:        
+                for i in range(len(array)):
+                    arr_clr[i] = (0, 255, 0)
+
+            if event.key == pygame.K_4:
                 heapSort(array)
                 for i in range(len(array)):
-                    arr_clr[i] = (0,255,0)
-                
+                    arr_clr[i] = (0, 255, 0)
+
             if event.key == pygame.K_5:
                 bubble(array)
 
-    
     draw()
     pygame.display.update()
-      
+
 pygame.QUIT
 
-
-
-    # # Screen colour
-    # # Tuple => RGB(red,green,blue)
-    # screen.fill((10, 5, 56)) #Everytime there is any kind of update on the pygame screen, 
-    #                          #i'll have to write update(such as at the end of the loop)
-    # for event in pygame.event.get():
-    #     if event.type == pygame.QUIT:
-    #         running = False
-    #         break
-    # pygame.display.update()
+# # Screen colour
+# # Tuple => RGB(red,green,blue)
+# screen.fill((10, 5, 56)) #Everytime there is any kind of update on the pygame screen,
+#                          #i'll have to write update(such as at the end of the loop)
+# for event in pygame.event.get():
+#     if event.type == pygame.QUIT:
+#         running = False
+#         break
+# pygame.display.update()
